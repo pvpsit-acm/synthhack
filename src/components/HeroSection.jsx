@@ -107,7 +107,7 @@ const HeroSection = () => {
             >
               <img
                 className="w-60 h-auto"
-                src="/font/DeptofCSELogo.png"
+                src="/assets/cselogo.png"
                 alt=""
               />
             </a>
