@@ -66,24 +66,6 @@ const FAQSection = () => {
             </Accordion>
           </div>
         </div>
-        
-        <div className="text-center mt-12">
-          <div className="space-card max-w-2xl mx-auto">
-            <h3 className="heading-2 text-cyan-400 mb-4">
-              Still have questions?
-            </h3>
-            <p className="body-medium text-gray-300 mb-4">
-              Can't find what you're looking for? Reach out to our team through 
-              the contact section below or join our WhatsApp community for instant support.
-            </p>
-            <button 
-              className="btn-secondary"
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
