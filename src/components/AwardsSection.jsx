@@ -75,11 +75,7 @@ const AwardsSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-lime-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-medium text-gray-300">Internship opportunities with sponsor companies</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-lime-400 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="body-medium text-gray-300">Mentorship from industry professionals</span>
+                <span className="body-medium text-gray-300">Exciting Prizes and Awards</span>
               </div>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-lime-400 rounded-full mt-2 flex-shrink-0"></div>
