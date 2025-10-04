@@ -70,19 +70,19 @@ const HeroSection = () => {
           <div className="flex flex-row flex-wrap justify-center gap-4 sm:gap-8 mb-12 text-gray-300">
             <div className="flex items-center gap-2 justify-center">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-lime-400" />
-              <span className="body-medium sm:body-large">
+              <span className="font-bold sm:font-bold body-medium sm:body-large ">
                 19-20 October 2025
               </span>
             </div>
             <div className="flex items-center gap-2 justify-center">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-lime-400" />
-              <span className="body-medium sm:body-large">
+              <span className="font-bold sm:font-bold body-medium sm:body-large ">
                 PVPSIT Auditorium
               </span>
             </div>
             <div className="flex items-center gap-2 justify-center">
               <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-lime-400" />
-              <span className="body-medium sm:body-large">24 Hours</span>
+              <span className="font-bold sm:font-bold body-medium sm:body-large ">24 Hours</span>
             </div>
           </div>
         </div>
