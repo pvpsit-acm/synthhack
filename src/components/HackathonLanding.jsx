@@ -16,29 +16,40 @@ const HackathonLanding = () => {
   const contactSectionRef = useRef(null);
 
   useEffect(() => {
+    // Check if we're on mobile
+    const isMobile = window.innerWidth <= 768;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target.id === 'contact') {
-            // Hide floating island when contact section is visible
-            setShowFloatingIsland(!entry.isIntersecting);
+          // Hide floating island when "Ready to Join" section is visible
+          if (entry.isIntersecting) {
+            console.log('Ready to Join section is visible - hiding floating island');
+            setShowFloatingIsland(false);
+          } else {
+            console.log('Ready to Join section is not visible - showing floating island');
+            setShowFloatingIsland(true);
           }
         });
       },
       {
-        threshold: 0.3, // Trigger when 30% of the contact section is visible
-        rootMargin: '-100px 0px' // Add some margin to trigger earlier
+        threshold: isMobile ? 0.1 : 0.3, // Lower threshold for mobile to trigger earlier
+        rootMargin: '0px' // No margin adjustment for consistent behavior
       }
     );
 
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      observer.observe(contactSection);
+    // Target the "Ready to Join" section specifically
+    const readyToJoinSection = document.getElementById('ready-to-join');
+    if (readyToJoinSection) {
+      observer.observe(readyToJoinSection);
+      console.log('Observing Ready to Join section, isMobile:', isMobile);
+    } else {
+      console.error('Ready to Join section not found!');
     }
 
     return () => {
-      if (contactSection) {
-        observer.unobserve(contactSection);
+      if (readyToJoinSection) {
+        observer.unobserve(readyToJoinSection);
       }
     };
   }, []);

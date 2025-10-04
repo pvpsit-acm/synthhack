@@ -1,8 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navigation = ({ activeSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show logo only when scrolled past first viewport height
+      const scrollPosition = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      
+      if (scrollPosition > viewportHeight) {
+        setShowLogo(true);
+      } else {
+        setShowLogo(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial position
+    handleScroll();
+
+    // Cleanup
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -29,12 +53,18 @@ const Navigation = ({ activeSection }) => {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div 
-            className="text-lg sm:text-xl font-bold text-white cursor-pointer   flex items-center gap-2"
+            className="text-lg sm:text-xl font-bold text-white cursor-pointer flex items-center gap-2"
             onClick={() => scrollToSection('home')}
             style={{fontFamily: 'Orbitron, Arial, sans-serif'}}
           >
-            <img src="/assets/logo.png" className='w-12 h-12 rounded-full' alt="SynthHack Logo" />
-            SYNTHHACK 2K25
+            <img src="/assets/logo.png" className='w-10 h-10 sm:w-12 sm:h-12 rounded-full' alt="SynthHack Logo" />
+            <img 
+              src="/assets/SynthHack.png" 
+              className={`h-4 sm:h-6 w-auto object-contain transition-opacity duration-300 ${
+                showLogo ? 'opacity-100' : 'opacity-0'
+              }`}
+              alt="SYNTHHACK" 
+            />
           </div>
 
           {/* Desktop Navigation */}

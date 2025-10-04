@@ -5,15 +5,19 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Who can participate in SYNTHHACK 2K25?",
-      answer: "The hackathon is open to all students, professionals, and tech enthusiasts. Teams can have 2-4 members, and we welcome participants of all skill levels."
+      answer: "The hackathon is open to all students. Teams must have 5 members, and we welcome participants of all skill levels."
+    },
+    {
+      question: "How do I register in Hackathon?",
+      answer: "To register for SYNTHHACK 2K25, visit our UnStop Event Site and fill out the registration form. Make sure to have your team details ready!"
+    },
+    {
+      question: "What are the themes that we can work on?",
+      answer: "You can work listed themes: Productivity & Education, Social Innovation, Health & Wellness, FinTech & Digital Economy, Agriculture & Food Security, and Security & Trust. Feel free to innovate within these domains!"
     },
     {
       question: "What should I bring to the hackathon?",
-      answer: "Bring your laptop, charger, any hardware you might need, and lots of enthusiasm! We'll provide meals, snacks, Wi-Fi, and workspace. Don't forget your student ID for verification."
-    },
-    {
-      question: "Do I need to have a team before registering?",
-      answer: "No! You can register individually and we'll help you find teammates during the team formation session. Alternatively, you can register as a complete team if you already have one."
+      answer: "Bring your laptop, charger, any hardware you might need, and lots of enthusiasm! We'll provide meals, snacks, Wi-Fi, and workspace. Don't forget your Student ID and a Government ID for verification."
     },
     {
       question: "What technologies can we use?",
@@ -21,11 +25,11 @@ const FAQSection = () => {
     },
     {
       question: "Is there any registration fee?",
-      answer: "No, SYNTHHACK 2K25 is completely free to participate. This includes meals, workspace, mentorship, and all event activities."
+      answer: "Participation in SYNTHHACK 2K25 is free, but the shortlisted 25 teams will have to pay 250 INR per member for food and accommodation."
     },
     {
       question: "Can we start working on our project before the hackathon?",
-      answer: "No, all projects must be built from scratch during the 48-hour event period. However, you can research ideas, prepare designs, and plan your approach beforehand."
+      answer: "No, all projects must be built from scratch during the 24-hour event period. However, you can research ideas, prepare implementation approaches, and plan your project structure beforehand."
     },
     {
       question: "What happens if I can't finish my project in time?",

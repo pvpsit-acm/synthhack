@@ -3,32 +3,30 @@ import { ExternalLink, MessageCircle } from 'lucide-react';
 
 const FloatingActionIsland = ({ isVisible = true }) => {
   const handleRegister = () => {
-    // Replace with actual Unstop registration link
-    // alert('Registration link: Replace with actual Unstop URL');
     window.open('https://unstop.com/p/synthhack-acm-pvpsit-1567429', '_blank');
   };
 
   const handleWhatsApp = () => {
-    // Replace with actual WhatsApp community link
-    alert('WhatsApp link: Replace with actual community invite URL');
-    // window.open('https://chat.whatsapp.com/your-community-link', '_blank');
+    window.open('https://chat.whatsapp.com/FWjLI788zDRDXKCoamGaI8', '_blank');
   };
+
+  console.log('FloatingActionIsland isVisible:', isVisible);
 
   return (
     <div className={`floating-island ${!isVisible ? 'hidden' : ''}`}>
       <button 
         onClick={handleRegister}
-        className="btn-primary"
+        className="btn-primary w-1/2"
       >
         <ExternalLink className="w-5 h-5" />
-        Register Now
+        Register <span className='hidden md:inline'>Now</span>
       </button>
       <button 
         onClick={handleWhatsApp}
-        className="btn-secondary"
+        className="btn-secondary w-1/2"
       >
         <MessageCircle className="w-5 h-5" />
-        Join WhatsApp
+        Join <span className='hidden md:inline'>WhatsApp</span>
       </button>
     </div>
   );

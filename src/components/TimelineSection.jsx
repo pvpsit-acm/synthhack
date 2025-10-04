@@ -7,19 +7,19 @@ const TimelineSection = () => {
       icon: <UserPlus className="w-6 h-6" />,
       title: "Registration",
       description: "Sign up and form your team (max 4 members)",
-      date: "Oct 1-15"
+      date: "Oct 3-11"
     },
     {
       icon: <Search className="w-6 h-6" />,
-      title: "Screening",
+      title: "Screening Round",
       description: "Team verification and problem statement selection",
-      date: "Oct 16-17"
+      date: "Oct 8-14"
     },
     {
       icon: <CheckCircle className="w-6 h-6" />,
       title: "Results",
       description: "Selected teams announcement",
-      date: "Oct 18"
+      date: "Oct 15"
     },
     {
       icon: <Code className="w-6 h-6" />,
@@ -30,20 +30,20 @@ const TimelineSection = () => {
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Coding Marathon",
-      description: "48 hours of intensive development",
+      description: "24 hours of intensive development",
       date: "Oct 19-20"
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Final Review",
       description: "Project submissions and presentations",
-      date: "Oct 20, 6 PM"
+      date: "Oct 20, 11 AM"
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Award Ceremony",
       description: "Winners announcement and prize distribution",
-      date: "Oct 20, 8 PM"
+      date: "Oct 20, 12 PM"
     }
   ];
 
@@ -60,38 +60,34 @@ const TimelineSection = () => {
           </p>
         </div>
         
-        {/* Timeline Infographic */}
-        <div className="timeline-container">
-          {/* Timeline Line - Hidden on mobile, visible on desktop */}
-          <div className="timeline-line hidden md:block"></div>
+        {/* Route Map Timeline */}
+        <div className="route-timeline-container">
+          {/* Main Route Line */}
+          <div className="route-line"></div>
           
           {timelineEvents.map((event, index) => (
-            <div key={index} className="timeline-item">
-              {/* Timeline Point */}
-              <div className="timeline-point hidden md:block"></div>
-              
-              {/* Timeline Connector */}
-              <div className="timeline-connector hidden md:block"></div>
-              
-              {/* Timeline Content */}
-              <div className="timeline-content">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-lime-400/20 flex items-center justify-center text-lime-400 flex-shrink-0">
-                    {event.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="heading-2 text-white text-lg mb-1">
-                      {event.title}
-                    </h3>
-                    <div className="text-xs sm:text-sm text-lime-400 font-semibold">
-                      {event.date}
-                    </div>
-                  </div>
+            <div key={index} className="route-stop" data-step={index + 1}>
+              {/* Route Point/Station */}
+              <div className="route-point">
+                <div className="route-icon">
+                  {event.icon}
                 </div>
-                <p className="body-medium text-gray-300">
-                  {event.description}
-                </p>
+                <div className="route-number">{index + 1}</div>
               </div>
+              
+              {/* Route Content Card */}
+              <div className="route-card">
+                <div className="route-date">{event.date}</div>
+                <h3 className="route-title">{event.title}</h3>
+                <p className="route-description">{event.description}</p>
+                
+                {/* Progress indicator */}
+                <div className="route-progress">
+                  <div className="route-progress-bar" style={{width: `${((index + 1) / timelineEvents.length) * 100}%`}}></div>
+                </div>
+              </div>
+              
+
             </div>
           ))}
         </div>

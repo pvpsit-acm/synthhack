@@ -58,19 +58,6 @@ const JudgingSection = () => {
             </div>
           ))}
         </div>
-        
-        <div className="mt-16 text-center">
-          <div className="space-card max-w-2xl mx-auto">
-            <h3 className="heading-2 text-cyan-400 mb-4">
-              Judging Panel
-            </h3>
-            <p className="body-medium text-gray-300">
-              Our esteemed panel includes industry veterans, startup founders, 
-              senior developers, and academic researchers who will provide valuable 
-              feedback and select the winning projects.
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

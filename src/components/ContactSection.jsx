@@ -4,40 +4,40 @@ import { Mail, Phone, User } from 'lucide-react';
 const ContactSection = () => {
   const contacts = [
     {
-      name: "Arjun Kumar",
-      role: "Event Coordinator",
-      email: "arjun.kumar@pvpsit.edu",
-      phone: "+91 98765 43210"
+      name: "N Sampreeth Chowdary",
+      role: "ACM Chair",
+      email: "nschowdary1234@gmail.com",
+      phone: "+91 86886 54968"
     },
     {
-      name: "Priya Sharma",
+      name: "Pavan Kumar Chennupati",
+      role: "ACM Vice Chair",
+      email: "pavankc005@gmail.com",
+      phone: "+91 90149 14111"
+    },
+    {
+      name: "G Gowtham Chowdary",
+      role: "ACM Secretary",
+      email: "garapatigowtham6@gmail.com",
+      phone: "+91 99889 94648"
+    },
+    {
+      name: "Y Siddhartha Chowdary",
       role: "Technical Lead",
-      email: "priya.sharma@pvpsit.edu",
-      phone: "+91 98765 43211"
+      email: "sidduyalamanchili3@gmail.com",
+      phone: "+91 90102 94227"
     },
     {
-      name: "Rahul Singh",
-      role: "Sponsorship Head",
-      email: "rahul.singh@pvpsit.edu",
-      phone: "+91 98765 43212"
-    },
-    {
-      name: "Sneha Patel",
-      role: "Marketing & PR",
-      email: "sneha.patel@pvpsit.edu",
-      phone: "+91 98765 43213"
-    },
-    {
-      name: "Vikram Reddy",
+      name: "Katta Jaya S Srithan",
       role: "Logistics Manager",
-      email: "vikram.reddy@pvpsit.edu",
+      email: "srithankatta9@gmail.com",
       phone: "+91 98765 43214"
     },
     {
-      name: "Anita Gupta",
+      name: "Kistamsetti Sai Lalith",
       role: "Participant Relations",
-      email: "anita.gupta@pvpsit.edu",
-      phone: "+91 98765 43215"
+      email: "mrsailalith@gmail.com",
+      phone: "+91 94925 68081"
     }
   ];
 
@@ -54,7 +54,6 @@ const ContactSection = () => {
           </p>
         </div>
         
-        {/* Desktop: 3x2 Grid, Tablet: 2x3 Grid, Mobile: 1 Column */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {contacts.map((contact, index) => (
             <div key={index} className="space-card text-center group hover:scale-105 transition-transform duration-300">
@@ -94,7 +93,7 @@ const ContactSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
+        <div id="ready-to-join" className="mt-16 text-center">
           <div className="space-card max-w-3xl mx-auto">
             <h3 className="heading-2 text-cyan-400 mb-6">
               Ready to Join the Adventure?
@@ -104,25 +103,20 @@ const ContactSection = () => {
               with like-minded innovators. Register now and be part of SYNTHHACK 2K25!
             </p>
             
-            {/* Call-to-action buttons matching floating island */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#" 
+                target='_blank'
+                href="https://unstop.com/p/synthhack-acm-pvpsit-1567429" 
                 className="btn-primary"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('Registration link will be added here!');
-                }}
+                
               >
                 Register Now
               </a>
               <a 
-                href="#" 
+                target='_blank'
+                href="https://chat.whatsapp.com/FWjLI788zDRDXKCoamGaI8" 
                 className="btn-secondary"
-                onClick={(e) => {
-                  e.preventDefault();
-                  alert('WhatsApp community link will be added here!');
-                }}
+                
               >
                 Join WhatsApp
               </a>

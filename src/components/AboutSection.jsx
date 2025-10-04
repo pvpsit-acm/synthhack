@@ -16,7 +16,7 @@ const AboutSection = () => {
     {
       icon: <Code className="w-8 h-8" />,
       title: "Hands-On Coding",
-      description: "48 hours of intensive coding to bring your innovative ideas to life."
+      description: "24 hours of intensive coding to bring your innovative ideas to life."
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
@@ -38,7 +38,7 @@ const AboutSection = () => {
             Why Participate?
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">
-            Join us for an extraordinary 48-hour journey where innovation meets implementation. 
+            Join us for an extraordinary 24-hour journey where innovation meets implementation. 
             SYNTHHACK 2K25 is more than just a hackathon – it's a launchpad for your ideas 
             and a catalyst for your career.
           </p>
