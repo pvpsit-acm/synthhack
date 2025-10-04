@@ -32,14 +32,9 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="section-spacing relative">
-      {/* Enhanced Parallax Elements */}
-      <div className="parallax-object parallax-satellite top-20 left-5" style={{animationDelay: '1s'}}></div>
-      <div className="parallax-object parallax-asteroid top-10 right-10" style={{animationDelay: '3s'}}></div>
-      <div className="parallax-object parallax-planet bottom-20 right-5" style={{animationDelay: '2s'}}></div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="heading-1 text-lime-400 neon-glow mb-4 sm:mb-6">
+          <h2 className="heading-1 text-lime-400   mb-4 sm:mb-6">
             Why Participate?
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navigation from './Navigation';
 import HeroSection from './HeroSection';
 import AboutSection from './AboutSection';
@@ -12,28 +12,35 @@ import FloatingActionIsland from './FloatingActionIsland';
 
 const HackathonLanding = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [showFloatingIsland, setShowFloatingIsland] = useState(true);
+  const contactSectionRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'themes', 'timeline', 'judging', 'awards', 'faq', 'contact'];
-      const scrollPosition = window.scrollY + 100;
-
-      for (let section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const offsetTop = element.offsetTop;
-          const offsetHeight = element.offsetHeight;
-          
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(section);
-            break;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target.id === 'contact') {
+            // Hide floating island when contact section is visible
+            setShowFloatingIsland(!entry.isIntersecting);
           }
-        }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the contact section is visible
+        rootMargin: '-100px 0px' // Add some margin to trigger earlier
+      }
+    );
+
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      observer.observe(contactSection);
+    }
+
+    return () => {
+      if (contactSection) {
+        observer.unobserve(contactSection);
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -56,8 +63,8 @@ const HackathonLanding = () => {
         <ContactSection />
       </main>
       
-      {/* Floating Action Island */}
-      <FloatingActionIsland />
+      {/* Floating Action Island - Hidden when contact section is visible */}
+      <FloatingActionIsland isVisible={showFloatingIsland} />
     </div>
   );
 };

@@ -22,20 +22,15 @@ const AwardsSection = () => {
 
   return (
     <section id="awards" className="section-spacing relative">
-      {/* Enhanced Parallax Elements */}
-      <div className="parallax-object parallax-rocket top-10 right-0" style={{animationDelay: '4s'}}></div>
-      <div className="parallax-object parallax-satellite bottom-10 left-10" style={{animationDelay: '2s'}}></div>
-      <div className="parallax-object parallax-planet top-1/2 right-20" style={{animationDelay: '1s'}}></div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
           <div className="mb-6 sm:mb-8">
-            <Trophy className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-400 mx-auto mb-4 neon-glow" />
+            <Trophy className="w-12 h-12 sm:w-16 sm:h-16 text-yellow-400 mx-auto mb-4  " />
           </div>
-          <h2 className="heading-1 text-lime-400 neon-glow mb-4 sm:mb-6">
+          <h2 className="heading-1 text-lime-400   mb-4 sm:mb-6">
             Awards & Prizes
           </h2>
-          <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-400 mb-6 neon-glow" style={{fontFamily: 'Orbitron, Arial, sans-serif'}}>
+          <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-yellow-400 mb-6  " style={{fontFamily: 'Orbitron, Arial, sans-serif'}}>
             ₹35,000 Prize Pool
           </div>
           <p className="body-large max-w-3xl mx-auto text-gray-300 mb-12">
@@ -46,7 +41,7 @@ const AwardsSection = () => {
         
         {/* Special Recognition Section */}
         <div className="text-center mb-8">
-          <h3 className="heading-1 text-cyan-400 neon-glow mb-8">
+          <h3 className="heading-1 text-cyan-400   mb-8">
             Special Recognition
           </h3>
         </div>

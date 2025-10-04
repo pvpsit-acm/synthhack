@@ -37,14 +37,9 @@ const ThemesSection = () => {
 
   return (
     <section id="themes" className="section-spacing relative">
-      {/* Enhanced Parallax Elements */}
-      <div className="parallax-object parallax-rocket top-5 left-0" style={{animationDelay: '2s'}}></div>
-      <div className="parallax-object parallax-planet bottom-10 left-10" style={{animationDelay: '1s'}}></div>
-      <div className="parallax-object parallax-satellite top-1/3 right-5" style={{animationDelay: '3s'}}></div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <h2 className="heading-1 text-lime-400 neon-glow mb-4 sm:mb-6">
+          <h2 className="heading-1 text-lime-400   mb-4 sm:mb-6">
             Problem Statements
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">

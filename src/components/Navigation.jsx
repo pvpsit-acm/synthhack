@@ -29,10 +29,11 @@ const Navigation = ({ activeSection }) => {
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
           <div 
-            className="text-lg sm:text-xl font-bold text-lime-400 cursor-pointer neon-glow"
+            className="text-lg sm:text-xl font-bold text-white cursor-pointer   flex items-center gap-2"
             onClick={() => scrollToSection('home')}
             style={{fontFamily: 'Orbitron, Arial, sans-serif'}}
           >
+            <img src="/assets/logo.png" className='w-12 h-12 rounded-full' alt="SynthHack Logo" />
             SYNTHHACK 2K25
           </div>
 
@@ -44,7 +45,7 @@ const Navigation = ({ activeSection }) => {
                 onClick={() => scrollToSection(item.id)}
                 className={`nav-link transition-colors duration-300 text-sm lg:text-base ${
                   activeSection === item.id 
-                    ? 'text-lime-400 neon-glow' 
+                    ? 'text-lime-400  ' 
                     : 'text-gray-300 hover:text-lime-400'
                 }`}
                 style={{fontFamily: 'SF Pro Display, Inter, sans-serif'}}
@@ -73,7 +74,7 @@ const Navigation = ({ activeSection }) => {
                   onClick={() => scrollToSection(item.id)}
                   className={`block w-full text-left px-4 py-3 transition-colors duration-300 text-sm ${
                     activeSection === item.id 
-                      ? 'text-lime-400 neon-glow bg-lime-400/10' 
+                      ? 'text-lime-400   bg-lime-400/10' 
                       : 'text-gray-300 hover:text-lime-400 hover:bg-lime-400/5'
                   }`}
                   style={{fontFamily: 'SF Pro Display, Inter, sans-serif'}}

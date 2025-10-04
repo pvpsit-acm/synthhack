@@ -1,11 +1,11 @@
 import React from 'react';
 import { ExternalLink, MessageCircle } from 'lucide-react';
 
-const FloatingActionIsland = () => {
+const FloatingActionIsland = ({ isVisible = true }) => {
   const handleRegister = () => {
     // Replace with actual Unstop registration link
-    alert('Registration link: Replace with actual Unstop URL');
-    // window.open('https://unstop.com/hackathon/synthhack-2k25', '_blank');
+    // alert('Registration link: Replace with actual Unstop URL');
+    window.open('https://unstop.com/p/synthhack-acm-pvpsit-1567429', '_blank');
   };
 
   const handleWhatsApp = () => {
@@ -15,7 +15,7 @@ const FloatingActionIsland = () => {
   };
 
   return (
-    <div className="floating-island">
+    <div className={`floating-island ${!isVisible ? 'hidden' : ''}`}>
       <button 
         onClick={handleRegister}
         className="btn-primary"

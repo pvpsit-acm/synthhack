@@ -27,12 +27,9 @@ const JudgingSection = () => {
 
   return (
     <section id="judging" className="section-spacing relative">
-      {/* Parallax Spaceship */}
-      <div className="absolute top-10 right-10 w-24 h-12 bg-gradient-to-r from-lime-400/20 to-cyan-400/20 transform rotate-12 blur-sm animate-pulse"></div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="heading-1 text-lime-400 neon-glow mb-6">
+          <h2 className="heading-1 text-lime-400   mb-6">
             Judging Criteria
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">

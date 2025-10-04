@@ -29,8 +29,8 @@
   --brand-active: rgba(217, 251, 6, 0.6);
 }
 
-/* Google Fonts Import - Zalando and SF Pro alternatives */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Google Fonts Import - Zolando, Orbitron and SF Pro alternatives */
+@import url('https://fonts.googleapis.com/css2?family=Zolando:wght@400;700;900&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 /* SF Pro Font Alternative - Using system fonts */
 @font-face {
@@ -96,9 +96,9 @@ body {
   50% { opacity: 0.3; }
 }
 
-/* Typography System - Mobile First with Zalando/SF Pro */
+/* Typography System - Mobile First with Zolando/SF Pro */
 .space-title-3d {
-  font-family: 'Orbitron', 'Audiowide', Arial, sans-serif;
+  font-family: 'Zolando', 'Audiowide', Arial, sans-serif;
   font-weight: 900;
   font-size: clamp(3rem, 12vw, 8rem);
   line-height: 0.8;
@@ -127,7 +127,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradientShift 3s ease infinite;
+  animation: gradientShift 1s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -325,67 +325,7 @@ body {
   }
 }
 
-/* Parallax Scroll Effects */
-.parallax-object {
-  position: absolute;
-  pointer-events: none;
-  z-index: 1;
-}
 
-.parallax-satellite {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(45deg, var(--space-blue), var(--space-purple));
-  border-radius: 50%;
-  animation: float 6s ease-in-out infinite;
-}
-
-.parallax-rocket {
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--space-orange), var(--space-pink));
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  animation: rocket 8s linear infinite;
-}
-
-.parallax-planet {
-  width: 80px;
-  height: 80px;
-  background: radial-gradient(circle at 30% 30%, var(--space-blue), var(--space-purple));
-  border-radius: 50%;
-  animation: rotate 20s linear infinite;
-}
-
-.parallax-asteroid {
-  width: 25px;
-  height: 25px;
-  background: var(--text-secondary);
-  border-radius: 40% 60% 60% 40%;
-  animation: tumble 10s linear infinite;
-}
-
-@keyframes rocket {
-  0% { transform: translateX(-100px) rotate(0deg); }
-  100% { transform: translateX(calc(100vw + 100px)) rotate(360deg); }
-}
-
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-@keyframes tumble {
-  0% { transform: rotate(0deg) translateX(0); }
-  100% { transform: rotate(720deg) translateX(50px); }
-}
-
-/* Mobile responsiveness for parallax */
-@media (max-width: 768px) {
-  .parallax-satellite { width: 25px; height: 25px; }
-  .parallax-rocket { width: 35px; height: 35px; }
-  .parallax-planet { width: 50px; height: 50px; }
-  .parallax-asteroid { width: 15px; height: 15px; }
-}
 
 /* Floating Action Island */
 .floating-island {
@@ -399,16 +339,16 @@ body {
   padding: 1rem 2rem;
   display: flex;
   gap: 1rem;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px var(--brand-primary);
   z-index: 1000;
-  animation: float 3s ease-in-out infinite;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-5px); }
+.floating-island.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
 }
+
 
 /* Flip Counter Animation */
 .flip-counter {

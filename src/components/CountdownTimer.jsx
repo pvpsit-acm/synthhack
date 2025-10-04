@@ -92,7 +92,7 @@ const CountdownTimer = ({ targetDate = '2025-10-19T09:00:00' }) => {
       
       <div className="text-center">
         <p className="text-xs sm:text-sm text-cyan-400 uppercase tracking-wide font-medium">
-          Time Until Launch
+          Register now to secure your spot!
         </p>
       </div>
     </div>

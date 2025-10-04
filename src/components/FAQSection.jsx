@@ -35,13 +35,9 @@ const FAQSection = () => {
 
   return (
     <section id="faq" className="section-spacing relative">
-      {/* Parallax Question Mark Elements */}
-      <div className="absolute top-20 right-20 text-6xl text-purple-500/10 font-bold transform rotate-12 animate-pulse">?</div>
-      <div className="absolute bottom-20 left-20 text-4xl text-cyan-500/10 font-bold transform -rotate-12 animate-pulse" style={{animationDelay: '1s'}}>?</div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="heading-1 text-lime-400 neon-glow mb-6">
+          <h2 className="heading-1 text-lime-400   mb-6">
             Frequently Asked Questions
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">

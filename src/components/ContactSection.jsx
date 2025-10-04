@@ -43,13 +43,9 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="section-spacing relative">
-      {/* Parallax Communication Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 border-2 border-lime-400/20 rounded-full animate-ping"></div>
-      <div className="absolute bottom-10 right-10 w-16 h-16 border-2 border-cyan-400/20 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
-      
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="heading-1 text-lime-400 neon-glow mb-6">
+          <h2 className="heading-1 text-lime-400   mb-6">
             Contact Us
           </h2>
           <p className="body-large max-w-3xl mx-auto text-gray-300">
