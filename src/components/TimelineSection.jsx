@@ -6,7 +6,7 @@ const TimelineSection = () => {
     {
       icon: <UserPlus className="w-6 h-6" />,
       title: "Registration",
-      description: "Sign up and form your team (max 4 members)",
+      description: "Sign up and form your team (5 Members)",
       date: "Oct 3-11"
     },
     {
