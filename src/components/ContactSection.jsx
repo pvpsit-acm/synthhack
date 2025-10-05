@@ -28,10 +28,10 @@ const ContactSection = () => {
       phone: "+91 90102 94227"
     },
     {
-      name: "Katta Jaya S Srithan",
+      name: "Srithan Katta",
       role: "Logistics Manager",
       email: "srithankatta9@gmail.com",
-      phone: "+91 98765 43214"
+      phone: "+91 93902 19304"
     },
     {
       name: "Kistamsetti Sai Lalith",

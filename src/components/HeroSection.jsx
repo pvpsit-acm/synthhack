@@ -63,7 +63,7 @@ const HeroSection = () => {
 
           {/* Countdown Timer in Single Container */}
           <div className="mb-12">
-            <CountdownTimer targetDate="2025-10-10T09:00:00" />
+            <CountdownTimer targetDate="2025-10-11T23:56:00" />
           </div>
 
           {/* Event Details */}
