@@ -71,7 +71,7 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 justify-center">
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-lime-400" />
               <span className="font-bold sm:font-bold body-medium sm:body-large ">
-                19-20 October 2025
+                18-19 October 2025
               </span>
             </div>
             <div className="flex items-center gap-2 justify-center">

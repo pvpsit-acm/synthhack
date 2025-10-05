@@ -25,25 +25,25 @@ const TimelineSection = () => {
       icon: <Code className="w-6 h-6" />,
       title: "Hackathon Begins",
       description: "Opening ceremony and problem statement reveal",
-      date: "Oct 19, 9 AM"
+      date: "Oct 18, 9 AM"
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Coding Marathon",
       description: "24 hours of intensive development",
-      date: "Oct 19-20"
+      date: "Oct 18-19"
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Final Review",
       description: "Project submissions and presentations",
-      date: "Oct 20, 11 AM"
+      date: "Oct 19, 11 AM"
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Award Ceremony",
       description: "Winners announcement and prize distribution",
-      date: "Oct 20, 12 PM"
+      date: "Oct 19, 12 PM"
     }
   ];
 
