@@ -7,7 +7,7 @@ const FloatingActionIsland = ({ isVisible = true }) => {
   };
 
   const handleWhatsApp = () => {
-    window.open('https://chat.whatsapp.com/FWjLI788zDRDXKCoamGaI8', '_blank');
+    window.open('https://chat.whatsapp.com/E3z7veXGX8r2EgNzAueNLx', '_blank');
   };
 
   console.log('FloatingActionIsland isVisible:', isVisible);

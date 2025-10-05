@@ -114,7 +114,7 @@ const ContactSection = () => {
               </a>
               <a 
                 target='_blank'
-                href="https://chat.whatsapp.com/FWjLI788zDRDXKCoamGaI8" 
+                href="https://chat.whatsapp.com/E3z7veXGX8r2EgNzAueNLx" 
                 className="btn-secondary"
                 
               >
